@@ -11,12 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 Aligning Data and Creating Counts
 
 ```{r}
-
-#BiocManager::install("limma")
+BiocManager::install("limma")
 library("limma")
-#BiocManager::install("Rsubread")
+BiocManager::install("Rsubread")
 library("Rsubread")
-#BiocManager::install("edgeR")
+BiocManager::install("edgeR")
 library("edgeR")
 
 #BiocManager::install("Glimma")
@@ -28,7 +27,6 @@ fastq<-c("rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz","rna_seq/C5060_GAGTGG_L005_
 
 align(index="rna_seq/Trinity",readfile1=fastq,type="rna",input_format="gzFASTQ",output_format="BAM")
 
-#linux code to sort bam files and create gtf files
 # git clone https://github.com/gpertea/stringtie.git
 #make release
 # cd samtools-0.1.18'
@@ -55,6 +53,7 @@ group <- as.factor(c("WildType","WildType","WildType","WildType","Treated","Trea
 d$samples$group <- group 
 lane <- as.factor(rep(("L005")))
 d$samples$lane <- lane
+
 
 ```
 Filtering Data
@@ -108,13 +107,13 @@ d2$counts[,2] <- d2$counts[,2]*5
 par(mfrow=c(1,2))
 lcpm <- cpm(d2, log=TRUE)
 boxplot(lcpm, las=2, col=col, main="")
-title(main="A. Example: Unnormalised data", ylab="Log-cpm")
+title(main="A. Unnormalised data", ylab="Log-cpm")
 d2 <- calcNormFactors(d2)
 d2$samples$norm.factors
 
 lcpm <- cpm(d2, log=TRUE)
 boxplot(lcpm, las=2, col=col, main="")
-title(main="B. Example: Normalised data", ylab="Log-cpm")
+title(main="B. Normalised data", ylab="Log-cpm")
 
 
 ```
@@ -145,6 +144,8 @@ design <- model.matrix(~0+group)
 colnames(design) <- gsub("group", "", colnames(design))
 design<-design[,c("WildType","Treated")]
 
+design 
+
 contr.matrix <- makeContrasts(
    WtvsTreated = Treated-WildType,
    levels = colnames(design))
@@ -159,7 +160,6 @@ v
 Linear model comparison
 ```{r}
 vfit <- lmFit(v, design)
-vfit1 <- lmFit(v, design)
 vfit <- contrasts.fit(vfit, contrasts=contr.matrix)
 efit <- eBayes(vfit)
 plotSA(efit)
@@ -169,18 +169,19 @@ Examine DE genes
 
 summary(decideTests(efit))
 
-#WtvsTreated in one column
+
 tfit <- treat(vfit, lfc=1)
 dt <- decideTests(tfit)
-#Wt and Treated separate columns
-tfit2<- treat(vfit1, lfc=1)
-dt2<-decideTests(tfit2)
 summary(dt)
 
-de.common <- which(dt2[,1]!=0 & dt2[,2]!=0)
-length(de.common)
-vennDiagram(dt2[,1:2], circle.col=c("turquoise", "salmon"))
-write.fit(tfit, dt, file="results.txt")
+
+# tt<- topTable(efit, coef = NULL, adjust = "fdr",n =nrow(WtvsTreated) )
+# UP <- subset(tt, tt$logFC > 0)
+# DOWN <- subset(tt, tt$logFC < 0)
+# up<-subset(UP,UP$adj.P.Val<0.05)
+# down<-subset(DOWN,DOWN$adj.P.Val<0.05)
+
+
 
 ```
 
@@ -189,8 +190,7 @@ WtvsTreated<-topTreat(tfit, coef=1, n=Inf)
 
 length(which(WtvsTreated$adj.P.Val < 0.05))
 
-plotMD(tfit, column=1, status=dt[,1], main=colnames(tfit)[1], xlim=c(-8,13))
-
+plotMD(tfit, column=1, status=dt[,1], main=colnames(tfit)[1], xlim=c(-8,13), col = c("green","red"))
 
 ```
 DE graph
@@ -211,6 +211,7 @@ heatmap.2(lcpm[i,], scale="row",
    col=mycol, trace="none", density.info="none", dendrogram="column",cexRow = 0.5,cexCol = 1,margins = c(4,6))
 
 ```
+
 
 
 
