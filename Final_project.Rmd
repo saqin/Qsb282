@@ -174,19 +174,12 @@ tfit <- treat(vfit, lfc=1)
 dt <- decideTests(tfit)
 summary(dt)
 
-
-# tt<- topTable(efit, coef = NULL, adjust = "fdr",n =nrow(WtvsTreated) )
-# UP <- subset(tt, tt$logFC > 0)
-# DOWN <- subset(tt, tt$logFC < 0)
-# up<-subset(UP,UP$adj.P.Val<0.05)
-# down<-subset(DOWN,DOWN$adj.P.Val<0.05)
-
-
-
 ```
 
 ```{r}
 WtvsTreated<-topTreat(tfit, coef=1, n=Inf)
+
+head(WtvsTreated)
 
 length(which(WtvsTreated$adj.P.Val < 0.05))
 
@@ -195,6 +188,7 @@ plotMD(tfit, column=1, status=dt[,1], main=colnames(tfit)[1], xlim=c(-8,13), col
 ```
 DE graph
 ```{r}
+#opens as html file
 glMDPlot(tfit, coef=1, status=dt, main=colnames(tfit)[1], counts=lcpm, groups=group, launch=TRUE)
 ```
 Heatmap

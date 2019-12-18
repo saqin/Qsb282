@@ -381,7 +381,7 @@ summary {
 <pre><code>## Warning: restored &#39;limma&#39;</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  C:\Users\sqin\AppData\Local\Temp\RtmpAFlMNE\downloaded_packages</code></pre>
+##  C:\Users\sqin\AppData\Local\Temp\RtmpuyaAEW\downloaded_packages</code></pre>
 <pre><code>## Old packages: &#39;BH&#39;, &#39;broom&#39;, &#39;DBI&#39;, &#39;nlme&#39;, &#39;plyr&#39;, &#39;purrr&#39;, &#39;Rcpp&#39;, &#39;rlang&#39;,
 ##   &#39;rmarkdown&#39;, &#39;scales&#39;, &#39;vctrs&#39;</code></pre>
 <pre class="r"><code>library(&quot;limma&quot;)
@@ -391,7 +391,7 @@ BiocManager::install(&quot;Rsubread&quot;)</code></pre>
 <pre><code>## package &#39;Rsubread&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\sqin\AppData\Local\Temp\RtmpAFlMNE\downloaded_packages</code></pre>
+##  C:\Users\sqin\AppData\Local\Temp\RtmpuyaAEW\downloaded_packages</code></pre>
 <pre><code>## Old packages: &#39;BH&#39;, &#39;broom&#39;, &#39;DBI&#39;, &#39;nlme&#39;, &#39;plyr&#39;, &#39;purrr&#39;, &#39;Rcpp&#39;, &#39;rlang&#39;,
 ##   &#39;rmarkdown&#39;, &#39;scales&#39;, &#39;vctrs&#39;</code></pre>
 <pre class="r"><code>library(&quot;Rsubread&quot;)
@@ -407,7 +407,7 @@ BiocManager::install(&quot;edgeR&quot;)</code></pre>
 <pre><code>## Warning: restored &#39;edgeR&#39;</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  C:\Users\sqin\AppData\Local\Temp\RtmpAFlMNE\downloaded_packages</code></pre>
+##  C:\Users\sqin\AppData\Local\Temp\RtmpuyaAEW\downloaded_packages</code></pre>
 <pre><code>## Old packages: &#39;BH&#39;, &#39;broom&#39;, &#39;DBI&#39;, &#39;nlme&#39;, &#39;plyr&#39;, &#39;purrr&#39;, &#39;Rcpp&#39;, &#39;rlang&#39;,
 ##   &#39;rmarkdown&#39;, &#39;scales&#39;, &#39;vctrs&#39;</code></pre>
 <pre class="r"><code>library(&quot;edgeR&quot;)
@@ -433,7 +433,7 @@ buildindex(basename=&quot;Trinity&quot;,reference=&quot;rna_seq/Trinity_multilin
 ## ||          Repeat threshold : 100 repeats                                    ||
 ## ||              Gapped index : no                                             ||
 ## ||                                                                            ||
-## ||       Free / total memory : 1.0GB / 7.8GB                                  ||
+## ||       Free / total memory : 0.4GB / 7.8GB                                  ||
 ## ||                                                                            ||
 ## ||               Input files : 1 file in total                                ||
 ## ||                             o Trinity_multiline.fasta                      ||
@@ -448,17 +448,17 @@ buildindex(basename=&quot;Trinity&quot;,reference=&quot;rna_seq/Trinity_multilin
 ## || 693 uninformative subreads were found.                                     ||
 ## || These subreads were excluded from index building.                          ||
 ## || Estimate the index size...                                                 ||
-## ||    8%,   1 mins elapsed, rate=692.9k bps/s                                 ||
-## ||   16%,   3 mins elapsed, rate=509.8k bps/s                                 ||
+## ||    8%,   0 mins elapsed, rate=1606.8k bps/s                                ||
+## ||   16%,   1 mins elapsed, rate=1262.0k bps/s                                ||
 ## ||                                                                            ||
 ## ||              WARNING: available memory is lower than 1.6 GB.               ||
 ## ||                           The program may run very slow.                   ||
 ## || Build a gapped index and/or split index into blocks to reduce memore use.  ||
 ## ||                                                                            ||
 ## || Build the index...                                                         ||
-## ||   49%,   3 mins elapsed, rate=1389.8k bps/s                                ||
-## ||   66%,   4 mins elapsed, rate=1389.1k bps/s                                ||
-## ||   91%,   6 mins elapsed, rate=1404.0k bps/s                                ||
+## ||   49%,   2 mins elapsed, rate=2370.4k bps/s                                ||
+## ||   66%,   2 mins elapsed, rate=2514.4k bps/s                                ||
+## ||   91%,   3 mins elapsed, rate=2642.8k bps/s                                ||
 ## || Save current index block...                                                ||
 ## ||  [ 0.0% finished ]                                                         ||
 ## ||  [ 10.0% finished ]                                                        ||
@@ -472,7 +472,7 @@ buildindex(basename=&quot;Trinity&quot;,reference=&quot;rna_seq/Trinity_multilin
 ## ||  [ 90.0% finished ]                                                        ||
 ## ||  [ 100.0% finished ]                                                       ||
 ## ||                                                                            ||
-## ||                     Total running time: 16.3 minutes.                      ||
+## ||                      Total running time: 8.0 minutes.                      ||
 ## ||        Index C:\Users\sqin\Desktop\Trinity was successfully built!         ||
 ## ||                                                                            ||
 ## \\============================================================================//</code></pre>
@@ -507,40 +507,40 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 11:54:06, pid=17096) =================\\
+## //================ Running (17-Dec-2019 20:48:06, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.2 mins elapsed, rate=16.7k reads per second             ||
-## ||    6% completed, 0.6 mins elapsed, rate=25.2k reads per second             ||
-## ||   13% completed, 0.9 mins elapsed, rate=25.1k reads per second             ||
-## ||   20% completed, 1.3 mins elapsed, rate=25.4k reads per second             ||
-## ||   26% completed, 1.6 mins elapsed, rate=24.9k reads per second             ||
-## ||   33% completed, 2.0 mins elapsed, rate=24.5k reads per second             ||
-## ||   40% completed, 2.4 mins elapsed, rate=24.1k reads per second             ||
-## ||   46% completed, 2.8 mins elapsed, rate=23.8k reads per second             ||
-## ||   53% completed, 3.3 mins elapsed, rate=23.2k reads per second             ||
-## ||   61% completed, 5.4 mins elapsed, rate=15.0k reads per second             ||
-## ||   64% completed, 6.9 mins elapsed, rate=12.4k reads per second             ||
-## ||   66% completed, 8.3 mins elapsed, rate=10.8k reads per second             ||
-## ||   69% completed, 9.4 mins elapsed, rate=9.9k reads per second              ||
-## ||   72% completed,  10 mins elapsed, rate=9.2k reads per second              ||
-## ||   75% completed,  11 mins elapsed, rate=8.7k reads per second              ||
-## ||   78% completed,  12 mins elapsed, rate=8.2k reads per second              ||
-## ||   81% completed,  13 mins elapsed, rate=7.8k reads per second              ||
-## ||   84% completed,  15 mins elapsed, rate=7.5k reads per second              ||
-## ||   87% completed,  17 mins elapsed, rate=6.9k reads per second              ||
-## ||   94% completed,  18 mins elapsed, rate=6.9k reads per second              ||
-## ||   96% completed,  18 mins elapsed, rate=6.8k reads per second              ||
-## ||   96% completed,  18 mins elapsed, rate=6.8k reads per second              ||
-## ||   97% completed,  19 mins elapsed, rate=6.8k reads per second              ||
-## ||   97% completed,  19 mins elapsed, rate=6.7k reads per second              ||
-## ||   97% completed,  19 mins elapsed, rate=6.7k reads per second              ||
-## ||   98% completed,  19 mins elapsed, rate=6.7k reads per second              ||
-## ||   98% completed,  19 mins elapsed, rate=6.7k reads per second              ||
-## ||   99% completed,  19 mins elapsed, rate=6.6k reads per second              ||
-## ||   99% completed,  20 mins elapsed, rate=6.6k reads per second              ||
+## ||    0% completed, 0.2 mins elapsed, rate=43.3k reads per second             ||
+## ||    6% completed, 0.4 mins elapsed, rate=50.5k reads per second             ||
+## ||   13% completed, 0.5 mins elapsed, rate=52.1k reads per second             ||
+## ||   20% completed, 0.7 mins elapsed, rate=52.4k reads per second             ||
+## ||   26% completed, 0.8 mins elapsed, rate=53.2k reads per second             ||
+## ||   33% completed, 1.1 mins elapsed, rate=48.6k reads per second             ||
+## ||   40% completed, 1.3 mins elapsed, rate=45.6k reads per second             ||
+## ||   46% completed, 1.5 mins elapsed, rate=46.4k reads per second             ||
+## ||   53% completed, 1.7 mins elapsed, rate=47.2k reads per second             ||
+## ||   61% completed, 2.5 mins elapsed, rate=32.1k reads per second             ||
+## ||   64% completed, 3.0 mins elapsed, rate=28.3k reads per second             ||
+## ||   66% completed, 3.5 mins elapsed, rate=25.2k reads per second             ||
+## ||   69% completed, 4.1 mins elapsed, rate=22.8k reads per second             ||
+## ||   72% completed, 4.6 mins elapsed, rate=21.0k reads per second             ||
+## ||   75% completed, 5.2 mins elapsed, rate=19.4k reads per second             ||
+## ||   78% completed, 6.2 mins elapsed, rate=17.0k reads per second             ||
+## ||   81% completed, 6.7 mins elapsed, rate=16.2k reads per second             ||
+## ||   84% completed, 7.3 mins elapsed, rate=15.4k reads per second             ||
+## ||   87% completed, 8.5 mins elapsed, rate=14.1k reads per second             ||
+## ||   94% completed, 9.2 mins elapsed, rate=14.0k reads per second             ||
+## ||   96% completed, 9.3 mins elapsed, rate=13.7k reads per second             ||
+## ||   96% completed, 9.4 mins elapsed, rate=13.7k reads per second             ||
+## ||   97% completed, 9.5 mins elapsed, rate=13.6k reads per second             ||
+## ||   97% completed, 9.6 mins elapsed, rate=13.6k reads per second             ||
+## ||   97% completed, 9.7 mins elapsed, rate=13.5k reads per second             ||
+## ||   98% completed, 9.7 mins elapsed, rate=13.5k reads per second             ||
+## ||   98% completed, 9.8 mins elapsed, rate=13.4k reads per second             ||
+## ||   99% completed, 9.9 mins elapsed, rate=13.3k reads per second             ||
+## ||   99% completed,   9 mins elapsed, rate=13.3k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -557,7 +557,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 13644                                        ||
 ## ||                                                                            ||
-## ||                Running time : 20.3 minutes                                 ||
+## ||                Running time : 10.1 minutes                                 ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -589,40 +589,40 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 12:14:27, pid=17096) =================\\
+## //================ Running (17-Dec-2019 20:58:10, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.1 mins elapsed, rate=21.2k reads per second             ||
-## ||    6% completed, 0.5 mins elapsed, rate=24.1k reads per second             ||
-## ||   13% completed, 0.8 mins elapsed, rate=23.9k reads per second             ||
-## ||   20% completed, 1.1 mins elapsed, rate=24.0k reads per second             ||
-## ||   26% completed, 1.5 mins elapsed, rate=24.0k reads per second             ||
-## ||   33% completed, 1.8 mins elapsed, rate=23.9k reads per second             ||
-## ||   40% completed, 2.1 mins elapsed, rate=23.9k reads per second             ||
-## ||   46% completed, 2.5 mins elapsed, rate=23.8k reads per second             ||
-## ||   53% completed, 2.8 mins elapsed, rate=23.8k reads per second             ||
-## ||   60% completed, 3.2 mins elapsed, rate=23.8k reads per second             ||
-## ||   67% completed, 4.4 mins elapsed, rate=18.4k reads per second             ||
-## ||   70% completed, 5.2 mins elapsed, rate=16.5k reads per second             ||
-## ||   74% completed,  58 mins elapsed, rate=1.5k reads per second              ||
-## ||   77% completed,  58 mins elapsed, rate=1.6k reads per second              ||
-## ||   80% completed,  59 mins elapsed, rate=1.6k reads per second              ||
-## ||   83% completed,  59 mins elapsed, rate=1.7k reads per second              ||
-## ||   87% completed,  60 mins elapsed, rate=1.7k reads per second              ||
-## ||   90% completed,  61 mins elapsed, rate=1.8k reads per second              ||
-## ||   93% completed,  62 mins elapsed, rate=1.8k reads per second              ||
-## ||   96% completed,  64 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
-## ||   99% completed,  65 mins elapsed, rate=1.8k reads per second              ||
+## ||    0% completed, 0.1 mins elapsed, rate=30.0k reads per second             ||
+## ||    6% completed, 0.3 mins elapsed, rate=46.5k reads per second             ||
+## ||   13% completed, 0.5 mins elapsed, rate=43.9k reads per second             ||
+## ||   20% completed, 0.6 mins elapsed, rate=44.5k reads per second             ||
+## ||   26% completed, 0.8 mins elapsed, rate=44.8k reads per second             ||
+## ||   33% completed, 1.0 mins elapsed, rate=45.0k reads per second             ||
+## ||   40% completed, 1.2 mins elapsed, rate=45.0k reads per second             ||
+## ||   46% completed, 1.3 mins elapsed, rate=44.8k reads per second             ||
+## ||   53% completed, 1.5 mins elapsed, rate=45.0k reads per second             ||
+## ||   60% completed, 1.7 mins elapsed, rate=45.0k reads per second             ||
+## ||   67% completed, 2.5 mins elapsed, rate=33.2k reads per second             ||
+## ||   70% completed, 2.8 mins elapsed, rate=30.7k reads per second             ||
+## ||   74% completed, 3.1 mins elapsed, rate=28.8k reads per second             ||
+## ||   77% completed, 3.4 mins elapsed, rate=27.1k reads per second             ||
+## ||   80% completed, 3.8 mins elapsed, rate=25.8k reads per second             ||
+## ||   83% completed, 4.1 mins elapsed, rate=24.7k reads per second             ||
+## ||   87% completed, 4.4 mins elapsed, rate=23.8k reads per second             ||
+## ||   90% completed, 4.8 mins elapsed, rate=22.9k reads per second             ||
+## ||   93% completed, 5.1 mins elapsed, rate=22.2k reads per second             ||
+## ||   96% completed, 5.6 mins elapsed, rate=21.2k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.3k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.2k reads per second             ||
+## ||   99% completed, 5.9 mins elapsed, rate=20.2k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -639,7 +639,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 44433                                        ||
 ## ||                                                                            ||
-## ||                Running time : 65.4 minutes                                 ||
+## ||                Running time : 6.0 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -671,30 +671,30 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:19:51, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:04:08, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.2 mins elapsed, rate=20.6k reads per second             ||
-## ||    6% completed, 0.5 mins elapsed, rate=23.7k reads per second             ||
-## ||   13% completed, 0.8 mins elapsed, rate=24.8k reads per second             ||
-## ||   20% completed, 1.2 mins elapsed, rate=23.7k reads per second             ||
-## ||   26% completed, 1.5 mins elapsed, rate=23.9k reads per second             ||
-## ||   33% completed, 1.8 mins elapsed, rate=23.9k reads per second             ||
-## ||   40% completed, 2.1 mins elapsed, rate=24.0k reads per second             ||
-## ||   46% completed, 2.4 mins elapsed, rate=24.3k reads per second             ||
-## ||   53% completed, 2.6 mins elapsed, rate=24.8k reads per second             ||
-## ||   60% completed, 2.9 mins elapsed, rate=25.1k reads per second             ||
-## ||   69% completed, 4.4 mins elapsed, rate=18.3k reads per second             ||
-## ||   73% completed, 4.9 mins elapsed, rate=17.3k reads per second             ||
-## ||   76% completed, 5.3 mins elapsed, rate=16.6k reads per second             ||
-## ||   80% completed, 5.7 mins elapsed, rate=16.1k reads per second             ||
-## ||   83% completed, 6.1 mins elapsed, rate=15.7k reads per second             ||
-## ||   86% completed, 6.4 mins elapsed, rate=15.4k reads per second             ||
-## ||   90% completed, 6.9 mins elapsed, rate=15.0k reads per second             ||
-## ||   93% completed, 7.3 mins elapsed, rate=14.7k reads per second             ||
-## ||   96% completed, 7.7 mins elapsed, rate=14.4k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=44.2k reads per second             ||
+## ||    6% completed, 0.2 mins elapsed, rate=48.1k reads per second             ||
+## ||   13% completed, 0.4 mins elapsed, rate=48.9k reads per second             ||
+## ||   20% completed, 0.6 mins elapsed, rate=47.8k reads per second             ||
+## ||   26% completed, 0.7 mins elapsed, rate=47.9k reads per second             ||
+## ||   33% completed, 0.9 mins elapsed, rate=48.3k reads per second             ||
+## ||   40% completed, 1.0 mins elapsed, rate=48.8k reads per second             ||
+## ||   46% completed, 1.2 mins elapsed, rate=48.9k reads per second             ||
+## ||   53% completed, 1.3 mins elapsed, rate=49.2k reads per second             ||
+## ||   60% completed, 1.5 mins elapsed, rate=48.7k reads per second             ||
+## ||   69% completed, 2.2 mins elapsed, rate=35.8k reads per second             ||
+## ||   73% completed, 2.6 mins elapsed, rate=32.0k reads per second             ||
+## ||   76% completed, 3.0 mins elapsed, rate=28.8k reads per second             ||
+## ||   80% completed, 3.5 mins elapsed, rate=26.4k reads per second             ||
+## ||   83% completed, 3.9 mins elapsed, rate=24.6k reads per second             ||
+## ||   86% completed, 4.3 mins elapsed, rate=23.2k reads per second             ||
+## ||   90% completed, 4.7 mins elapsed, rate=22.0k reads per second             ||
+## ||   93% completed, 5.1 mins elapsed, rate=21.1k reads per second             ||
+## ||   96% completed, 5.5 mins elapsed, rate=20.2k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -711,7 +711,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 29070                                        ||
 ## ||                                                                            ||
-## ||                Running time : 8.1 minutes                                  ||
+## ||                Running time : 5.9 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -743,30 +743,30 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:27:55, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:10:01, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.1 mins elapsed, rate=49.8k reads per second             ||
-## ||    6% completed, 0.2 mins elapsed, rate=57.1k reads per second             ||
-## ||   13% completed, 0.4 mins elapsed, rate=57.1k reads per second             ||
-## ||   20% completed, 0.5 mins elapsed, rate=57.3k reads per second             ||
-## ||   26% completed, 0.6 mins elapsed, rate=56.0k reads per second             ||
-## ||   33% completed, 0.7 mins elapsed, rate=55.2k reads per second             ||
-## ||   40% completed, 0.8 mins elapsed, rate=55.3k reads per second             ||
-## ||   46% completed, 0.9 mins elapsed, rate=55.4k reads per second             ||
-## ||   53% completed, 1.1 mins elapsed, rate=55.3k reads per second             ||
-## ||   60% completed, 1.2 mins elapsed, rate=55.1k reads per second             ||
-## ||   69% completed, 1.8 mins elapsed, rate=37.8k reads per second             ||
-## ||   73% completed, 2.1 mins elapsed, rate=33.0k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=43.3k reads per second             ||
+## ||    6% completed, 0.2 mins elapsed, rate=54.2k reads per second             ||
+## ||   13% completed, 0.3 mins elapsed, rate=50.4k reads per second             ||
+## ||   20% completed, 0.5 mins elapsed, rate=49.5k reads per second             ||
+## ||   26% completed, 0.6 mins elapsed, rate=49.4k reads per second             ||
+## ||   33% completed, 0.7 mins elapsed, rate=50.3k reads per second             ||
+## ||   40% completed, 0.8 mins elapsed, rate=50.5k reads per second             ||
+## ||   46% completed, 1.0 mins elapsed, rate=50.6k reads per second             ||
+## ||   53% completed, 1.1 mins elapsed, rate=50.1k reads per second             ||
+## ||   60% completed, 1.2 mins elapsed, rate=49.9k reads per second             ||
+## ||   69% completed, 1.8 mins elapsed, rate=36.8k reads per second             ||
+## ||   73% completed, 2.1 mins elapsed, rate=32.7k reads per second             ||
 ## ||   76% completed, 2.5 mins elapsed, rate=29.5k reads per second             ||
-## ||   80% completed, 2.8 mins elapsed, rate=27.2k reads per second             ||
-## ||   83% completed, 3.1 mins elapsed, rate=25.4k reads per second             ||
-## ||   86% completed, 3.4 mins elapsed, rate=24.0k reads per second             ||
-## ||   90% completed, 3.8 mins elapsed, rate=22.9k reads per second             ||
-## ||   93% completed, 4.1 mins elapsed, rate=21.9k reads per second             ||
-## ||   96% completed, 4.4 mins elapsed, rate=21.0k reads per second             ||
+## ||   80% completed, 2.8 mins elapsed, rate=27.1k reads per second             ||
+## ||   83% completed, 3.1 mins elapsed, rate=25.3k reads per second             ||
+## ||   86% completed, 3.5 mins elapsed, rate=23.8k reads per second             ||
+## ||   90% completed, 3.8 mins elapsed, rate=22.5k reads per second             ||
+## ||   93% completed, 4.1 mins elapsed, rate=21.5k reads per second             ||
+## ||   96% completed, 4.5 mins elapsed, rate=20.6k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -783,7 +783,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 13925                                        ||
 ## ||                                                                            ||
-## ||                Running time : 4.7 minutes                                  ||
+## ||                Running time : 4.8 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -815,40 +815,40 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:32:38, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:14:51, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.1 mins elapsed, rate=30.4k reads per second             ||
-## ||    6% completed, 0.3 mins elapsed, rate=52.8k reads per second             ||
-## ||   13% completed, 0.5 mins elapsed, rate=56.1k reads per second             ||
-## ||   20% completed, 0.6 mins elapsed, rate=56.7k reads per second             ||
-## ||   26% completed, 0.8 mins elapsed, rate=57.3k reads per second             ||
-## ||   33% completed, 0.9 mins elapsed, rate=57.2k reads per second             ||
-## ||   40% completed, 1.1 mins elapsed, rate=56.5k reads per second             ||
-## ||   46% completed, 1.2 mins elapsed, rate=56.3k reads per second             ||
-## ||   53% completed, 1.4 mins elapsed, rate=54.1k reads per second             ||
-## ||   61% completed, 2.4 mins elapsed, rate=33.4k reads per second             ||
-## ||   64% completed, 2.9 mins elapsed, rate=29.3k reads per second             ||
-## ||   67% completed, 3.6 mins elapsed, rate=25.1k reads per second             ||
-## ||   69% completed, 4.0 mins elapsed, rate=23.1k reads per second             ||
-## ||   72% completed, 4.6 mins elapsed, rate=21.2k reads per second             ||
-## ||   75% completed, 5.1 mins elapsed, rate=19.9k reads per second             ||
-## ||   78% completed, 5.6 mins elapsed, rate=18.7k reads per second             ||
-## ||   81% completed, 6.1 mins elapsed, rate=17.7k reads per second             ||
-## ||   84% completed, 6.7 mins elapsed, rate=16.7k reads per second             ||
-## ||   87% completed, 7.9 mins elapsed, rate=15.0k reads per second             ||
-## ||   94% completed, 9.3 mins elapsed, rate=13.7k reads per second             ||
-## ||   96% completed, 9.4 mins elapsed, rate=13.6k reads per second             ||
-## ||   96% completed, 9.5 mins elapsed, rate=13.5k reads per second             ||
-## ||   97% completed, 9.6 mins elapsed, rate=13.5k reads per second             ||
-## ||   97% completed, 9.7 mins elapsed, rate=13.5k reads per second             ||
-## ||   97% completed, 9.7 mins elapsed, rate=13.4k reads per second             ||
-## ||   98% completed, 9.8 mins elapsed, rate=13.4k reads per second             ||
-## ||   98% completed, 9.9 mins elapsed, rate=13.3k reads per second             ||
-## ||   99% completed,   9 mins elapsed, rate=13.3k reads per second             ||
-## ||   99% completed,  10 mins elapsed, rate=13.2k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=42.2k reads per second             ||
+## ||    6% completed, 0.3 mins elapsed, rate=45.0k reads per second             ||
+## ||   13% completed, 0.5 mins elapsed, rate=46.2k reads per second             ||
+## ||   20% completed, 0.6 mins elapsed, rate=48.2k reads per second             ||
+## ||   26% completed, 0.8 mins elapsed, rate=49.1k reads per second             ||
+## ||   33% completed, 1.0 mins elapsed, rate=50.0k reads per second             ||
+## ||   40% completed, 1.1 mins elapsed, rate=50.5k reads per second             ||
+## ||   46% completed, 1.3 mins elapsed, rate=51.0k reads per second             ||
+## ||   53% completed, 1.5 mins elapsed, rate=51.0k reads per second             ||
+## ||   61% completed, 2.3 mins elapsed, rate=35.6k reads per second             ||
+## ||   64% completed, 2.8 mins elapsed, rate=31.0k reads per second             ||
+## ||   67% completed, 3.2 mins elapsed, rate=27.6k reads per second             ||
+## ||   69% completed, 3.7 mins elapsed, rate=25.0k reads per second             ||
+## ||   72% completed, 4.3 mins elapsed, rate=22.8k reads per second             ||
+## ||   75% completed, 4.9 mins elapsed, rate=20.7k reads per second             ||
+## ||   78% completed, 5.4 mins elapsed, rate=19.5k reads per second             ||
+## ||   81% completed, 5.9 mins elapsed, rate=18.4k reads per second             ||
+## ||   84% completed, 6.4 mins elapsed, rate=17.6k reads per second             ||
+## ||   87% completed, 7.3 mins elapsed, rate=16.1k reads per second             ||
+## ||   94% completed, 8.2 mins elapsed, rate=15.4k reads per second             ||
+## ||   96% completed, 8.4 mins elapsed, rate=15.4k reads per second             ||
+## ||   96% completed, 8.4 mins elapsed, rate=15.3k reads per second             ||
+## ||   97% completed, 8.5 mins elapsed, rate=15.2k reads per second             ||
+## ||   97% completed, 8.6 mins elapsed, rate=15.2k reads per second             ||
+## ||   97% completed, 8.6 mins elapsed, rate=15.1k reads per second             ||
+## ||   98% completed, 8.7 mins elapsed, rate=15.1k reads per second             ||
+## ||   98% completed, 8.8 mins elapsed, rate=15.0k reads per second             ||
+## ||   99% completed, 8.8 mins elapsed, rate=15.0k reads per second             ||
+## ||   99% completed, 8.9 mins elapsed, rate=14.9k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -865,7 +865,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 13858                                        ||
 ## ||                                                                            ||
-## ||                Running time : 10.1 minutes                                 ||
+## ||                Running time : 9.0 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -897,40 +897,40 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:42:47, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:23:51, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.2 mins elapsed, rate=30.0k reads per second             ||
-## ||    6% completed, 0.4 mins elapsed, rate=37.3k reads per second             ||
-## ||   13% completed, 0.6 mins elapsed, rate=38.3k reads per second             ||
-## ||   20% completed, 0.8 mins elapsed, rate=39.8k reads per second             ||
-## ||   26% completed, 1.0 mins elapsed, rate=39.4k reads per second             ||
-## ||   33% completed, 1.2 mins elapsed, rate=39.5k reads per second             ||
-## ||   40% completed, 1.4 mins elapsed, rate=40.2k reads per second             ||
-## ||   46% completed, 1.6 mins elapsed, rate=40.0k reads per second             ||
-## ||   53% completed, 1.7 mins elapsed, rate=40.5k reads per second             ||
-## ||   60% completed, 2.0 mins elapsed, rate=40.3k reads per second             ||
-## ||   67% completed, 3.0 mins elapsed, rate=27.0k reads per second             ||
-## ||   71% completed, 3.3 mins elapsed, rate=25.7k reads per second             ||
-## ||   74% completed, 3.8 mins elapsed, rate=23.6k reads per second             ||
-## ||   77% completed, 4.2 mins elapsed, rate=22.4k reads per second             ||
-## ||   80% completed, 4.5 mins elapsed, rate=21.6k reads per second             ||
-## ||   83% completed, 4.9 mins elapsed, rate=20.7k reads per second             ||
-## ||   87% completed, 5.2 mins elapsed, rate=20.2k reads per second             ||
-## ||   90% completed, 5.5 mins elapsed, rate=19.7k reads per second             ||
-## ||   93% completed, 5.9 mins elapsed, rate=19.2k reads per second             ||
-## ||   96% completed, 7.1 mins elapsed, rate=16.9k reads per second             ||
-## ||   99% completed, 7.3 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
-## ||   99% completed, 7.4 mins elapsed, rate=16.2k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=45.7k reads per second             ||
+## ||    6% completed, 0.3 mins elapsed, rate=47.2k reads per second             ||
+## ||   13% completed, 0.5 mins elapsed, rate=43.3k reads per second             ||
+## ||   20% completed, 0.6 mins elapsed, rate=44.1k reads per second             ||
+## ||   26% completed, 0.8 mins elapsed, rate=44.6k reads per second             ||
+## ||   33% completed, 1.0 mins elapsed, rate=44.6k reads per second             ||
+## ||   40% completed, 1.2 mins elapsed, rate=44.7k reads per second             ||
+## ||   46% completed, 1.3 mins elapsed, rate=45.1k reads per second             ||
+## ||   53% completed, 1.5 mins elapsed, rate=45.2k reads per second             ||
+## ||   60% completed, 1.7 mins elapsed, rate=45.4k reads per second             ||
+## ||   67% completed, 2.2 mins elapsed, rate=36.6k reads per second             ||
+## ||   71% completed, 2.5 mins elapsed, rate=33.7k reads per second             ||
+## ||   74% completed, 2.9 mins elapsed, rate=31.3k reads per second             ||
+## ||   77% completed, 3.2 mins elapsed, rate=29.5k reads per second             ||
+## ||   80% completed, 3.5 mins elapsed, rate=28.1k reads per second             ||
+## ||   83% completed, 3.7 mins elapsed, rate=26.9k reads per second             ||
+## ||   87% completed, 4.0 mins elapsed, rate=26.0k reads per second             ||
+## ||   90% completed, 4.3 mins elapsed, rate=25.0k reads per second             ||
+## ||   93% completed, 4.6 mins elapsed, rate=24.3k reads per second             ||
+## ||   96% completed, 4.9 mins elapsed, rate=24.0k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.8k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.8k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.8k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.8k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.8k reads per second             ||
+## ||   99% completed, 5.0 mins elapsed, rate=23.7k reads per second             ||
+## ||   99% completed, 5.1 mins elapsed, rate=23.7k reads per second             ||
+## ||   99% completed, 5.1 mins elapsed, rate=23.7k reads per second             ||
+## ||   99% completed, 5.1 mins elapsed, rate=23.7k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -947,7 +947,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 44994                                        ||
 ## ||                                                                            ||
-## ||                Running time : 7.4 minutes                                  ||
+## ||                Running time : 5.1 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -979,30 +979,30 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:50:13, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:28:56, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.1 mins elapsed, rate=9.6k reads per second              ||
-## ||    6% completed, 0.3 mins elapsed, rate=43.8k reads per second             ||
-## ||   13% completed, 0.4 mins elapsed, rate=45.9k reads per second             ||
-## ||   20% completed, 0.6 mins elapsed, rate=45.6k reads per second             ||
-## ||   26% completed, 0.8 mins elapsed, rate=46.1k reads per second             ||
-## ||   33% completed, 0.9 mins elapsed, rate=46.1k reads per second             ||
-## ||   40% completed, 1.1 mins elapsed, rate=46.2k reads per second             ||
-## ||   46% completed, 1.2 mins elapsed, rate=46.3k reads per second             ||
-## ||   53% completed, 1.4 mins elapsed, rate=45.9k reads per second             ||
-## ||   60% completed, 1.6 mins elapsed, rate=45.9k reads per second             ||
-## ||   69% completed, 2.3 mins elapsed, rate=34.7k reads per second             ||
-## ||   73% completed, 2.8 mins elapsed, rate=30.0k reads per second             ||
-## ||   76% completed, 3.3 mins elapsed, rate=26.8k reads per second             ||
-## ||   80% completed, 3.7 mins elapsed, rate=24.8k reads per second             ||
-## ||   83% completed, 4.1 mins elapsed, rate=23.0k reads per second             ||
-## ||   86% completed, 4.6 mins elapsed, rate=21.5k reads per second             ||
-## ||   90% completed, 5.0 mins elapsed, rate=20.4k reads per second             ||
-## ||   93% completed, 5.4 mins elapsed, rate=19.6k reads per second             ||
-## ||   96% completed, 5.9 mins elapsed, rate=18.9k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=38.1k reads per second             ||
+## ||    6% completed, 0.2 mins elapsed, rate=53.6k reads per second             ||
+## ||   13% completed, 0.4 mins elapsed, rate=53.0k reads per second             ||
+## ||   20% completed, 0.5 mins elapsed, rate=51.3k reads per second             ||
+## ||   26% completed, 0.7 mins elapsed, rate=50.8k reads per second             ||
+## ||   33% completed, 0.8 mins elapsed, rate=50.8k reads per second             ||
+## ||   40% completed, 1.0 mins elapsed, rate=49.7k reads per second             ||
+## ||   46% completed, 1.2 mins elapsed, rate=49.6k reads per second             ||
+## ||   53% completed, 1.3 mins elapsed, rate=49.7k reads per second             ||
+## ||   60% completed, 1.5 mins elapsed, rate=49.7k reads per second             ||
+## ||   69% completed, 2.1 mins elapsed, rate=38.0k reads per second             ||
+## ||   73% completed, 2.5 mins elapsed, rate=33.9k reads per second             ||
+## ||   76% completed, 2.8 mins elapsed, rate=30.8k reads per second             ||
+## ||   80% completed, 3.2 mins elapsed, rate=28.5k reads per second             ||
+## ||   83% completed, 3.6 mins elapsed, rate=26.6k reads per second             ||
+## ||   86% completed, 4.0 mins elapsed, rate=25.0k reads per second             ||
+## ||   90% completed, 4.3 mins elapsed, rate=23.7k reads per second             ||
+## ||   93% completed, 4.7 mins elapsed, rate=22.6k reads per second             ||
+## ||   96% completed, 5.1 mins elapsed, rate=21.7k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -1019,7 +1019,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 28015                                        ||
 ## ||                                                                            ||
-## ||                Running time : 6.3 minutes                                  ||
+## ||                Running time : 5.5 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
@@ -1051,30 +1051,30 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## \\============================================================================//
 ## 
-## //================ Running (17-Dec-2019 13:56:29, pid=17096) =================\\
+## //================ Running (17-Dec-2019 21:34:24, pid=16500) =================\\
 ## ||                                                                            ||
 ## || The input file contains base space reads.                                  ||
 ## || The range of Phred scores observed in the data is [2,41]                   ||
 ## || Load the 1-th index block...                                               ||
-## ||    0% completed, 0.2 mins elapsed, rate=2.3k reads per second              ||
-## ||    6% completed, 0.3 mins elapsed, rate=33.2k reads per second             ||
-## ||   13% completed, 0.4 mins elapsed, rate=40.2k reads per second             ||
-## ||   20% completed, 0.6 mins elapsed, rate=44.0k reads per second             ||
-## ||   26% completed, 0.7 mins elapsed, rate=45.8k reads per second             ||
-## ||   33% completed, 0.8 mins elapsed, rate=46.4k reads per second             ||
-## ||   40% completed, 0.9 mins elapsed, rate=46.9k reads per second             ||
-## ||   46% completed, 1.1 mins elapsed, rate=46.4k reads per second             ||
-## ||   53% completed, 1.2 mins elapsed, rate=45.9k reads per second             ||
-## ||   60% completed, 1.4 mins elapsed, rate=46.5k reads per second             ||
-## ||   69% completed, 2.0 mins elapsed, rate=34.2k reads per second             ||
-## ||   73% completed, 2.3 mins elapsed, rate=30.9k reads per second             ||
-## ||   76% completed, 2.7 mins elapsed, rate=27.4k reads per second             ||
-## ||   80% completed, 3.0 mins elapsed, rate=25.4k reads per second             ||
-## ||   83% completed, 3.3 mins elapsed, rate=24.1k reads per second             ||
-## ||   86% completed, 3.7 mins elapsed, rate=22.7k reads per second             ||
-## ||   90% completed, 4.0 mins elapsed, rate=21.6k reads per second             ||
-## ||   93% completed, 4.3 mins elapsed, rate=20.5k reads per second             ||
-## ||   96% completed, 4.7 mins elapsed, rate=19.7k reads per second             ||
+## ||    0% completed, 0.1 mins elapsed, rate=44.4k reads per second             ||
+## ||    6% completed, 0.2 mins elapsed, rate=50.3k reads per second             ||
+## ||   13% completed, 0.3 mins elapsed, rate=50.2k reads per second             ||
+## ||   20% completed, 0.5 mins elapsed, rate=48.5k reads per second             ||
+## ||   26% completed, 0.6 mins elapsed, rate=49.4k reads per second             ||
+## ||   33% completed, 0.7 mins elapsed, rate=50.4k reads per second             ||
+## ||   40% completed, 0.8 mins elapsed, rate=51.6k reads per second             ||
+## ||   46% completed, 1.0 mins elapsed, rate=51.1k reads per second             ||
+## ||   53% completed, 1.1 mins elapsed, rate=50.8k reads per second             ||
+## ||   60% completed, 1.2 mins elapsed, rate=50.7k reads per second             ||
+## ||   69% completed, 1.7 mins elapsed, rate=38.8k reads per second             ||
+## ||   73% completed, 2.0 mins elapsed, rate=34.9k reads per second             ||
+## ||   76% completed, 2.3 mins elapsed, rate=31.8k reads per second             ||
+## ||   80% completed, 2.6 mins elapsed, rate=29.5k reads per second             ||
+## ||   83% completed, 2.9 mins elapsed, rate=27.6k reads per second             ||
+## ||   86% completed, 3.2 mins elapsed, rate=26.0k reads per second             ||
+## ||   90% completed, 3.5 mins elapsed, rate=24.7k reads per second             ||
+## ||   93% completed, 3.8 mins elapsed, rate=23.5k reads per second             ||
+## ||   96% completed, 4.1 mins elapsed, rate=22.6k reads per second             ||
 ## ||                                                                            ||
 ## ||                           Completed successfully.                          ||
 ## ||                                                                            ||
@@ -1091,7 +1091,7 @@ align(index=&quot;rna_seq/Trinity&quot;,readfile1=fastq,type=&quot;rna&quot;,inp
 ## ||                                                                            ||
 ## ||                      Indels : 13923                                        ||
 ## ||                                                                            ||
-## ||                Running time : 5.0 minutes                                  ||
+## ||                Running time : 4.4 minutes                                  ||
 ## ||                                                                            ||
 ## \\============================================================================//</code></pre>
 <pre><code>##                       C5059.ATCACG.L005.R1.001.fastq.gz.subread.BAM
@@ -1164,24 +1164,24 @@ qs &lt;- qualityScores(filename=&quot;rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz&
 ## qualityScores Rsubread 1.34.7
 ## 
 ## Scan the input file...
-##   1000000 reads have been scanned in 2.1 seconds.
-##   2000000 reads have been scanned in 3.9 seconds.
-##   3000000 reads have been scanned in 5.9 seconds.
-##   4000000 reads have been scanned in 7.6 seconds.
-##   5000000 reads have been scanned in 9.1 seconds.
-##   6000000 reads have been scanned in 10.5 seconds.
-##   7000000 reads have been scanned in 12.0 seconds.
-##   8000000 reads have been scanned in 13.8 seconds.
+##   1000000 reads have been scanned in 1.5 seconds.
+##   2000000 reads have been scanned in 3.0 seconds.
+##   3000000 reads have been scanned in 4.6 seconds.
+##   4000000 reads have been scanned in 6.1 seconds.
+##   5000000 reads have been scanned in 7.6 seconds.
+##   6000000 reads have been scanned in 9.1 seconds.
+##   7000000 reads have been scanned in 10.5 seconds.
+##   8000000 reads have been scanned in 12.2 seconds.
 ## Totally 8001784 reads were scanned; the sampling interval is 8001.
 ## Now extract read quality information...
-##   1000000 reads have been scanned in 15.3 seconds.
-##   2000000 reads have been scanned in 17.2 seconds.
-##   3000000 reads have been scanned in 18.8 seconds.
-##   4000000 reads have been scanned in 20.3 seconds.
-##   5000000 reads have been scanned in 21.7 seconds.
-##   6000000 reads have been scanned in 23.3 seconds.
-##   7000000 reads have been scanned in 25.0 seconds.
-##   8000000 reads have been scanned in 26.5 seconds.
+##   1000000 reads have been scanned in 13.7 seconds.
+##   2000000 reads have been scanned in 15.2 seconds.
+##   3000000 reads have been scanned in 16.8 seconds.
+##   4000000 reads have been scanned in 18.2 seconds.
+##   5000000 reads have been scanned in 19.7 seconds.
+##   6000000 reads have been scanned in 21.2 seconds.
+##   7000000 reads have been scanned in 22.6 seconds.
+##   8000000 reads have been scanned in 24.1 seconds.
 ## 
 ## Completed successfully. Quality scores for 1000 reads (equally spaced in the file) are returned.</code></pre>
 <pre class="r"><code>boxplot(qs)</code></pre>
@@ -1230,7 +1230,7 @@ qs &lt;- qualityScores(filename=&quot;rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz&
 ## ||    Single-end reads are included.                                          ||
 ## ||    Total alignments : 8001784                                              ||
 ## ||    Successfully assigned alignments : 2534528 (31.7%)                      ||
-## ||    Running time : 0.20 minutes                                             ||
+## ||    Running time : 0.21 minutes                                             ||
 ## ||                                                                            ||
 ## || Process BAM file C5059_ATCACG_L005_R2_001_sort.BAM...                      ||
 ## ||    Single-end reads are included.                                          ||
@@ -1242,7 +1242,7 @@ qs &lt;- qualityScores(filename=&quot;rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz&
 ## ||    Single-end reads are included.                                          ||
 ## ||    Total alignments : 7213420                                              ||
 ## ||    Successfully assigned alignments : 3610483 (50.1%)                      ||
-## ||    Running time : 0.20 minutes                                             ||
+## ||    Running time : 0.21 minutes                                             ||
 ## ||                                                                            ||
 ## || Process BAM file C5060_GAGTGG_L005_R2_001_sort.BAM...                      ||
 ## ||    Single-end reads are included.                                          ||
@@ -1260,7 +1260,7 @@ qs &lt;- qualityScores(filename=&quot;rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz&
 ## ||    Single-end reads are included.                                          ||
 ## ||    Total alignments : 6846192                                              ||
 ## ||    Successfully assigned alignments : 2870428 (41.9%)                      ||
-## ||    Running time : 0.18 minutes                                             ||
+## ||    Running time : 0.17 minutes                                             ||
 ## ||                                                                            ||
 ## || Process BAM file C5063_GTGAAA_L005_R1_001_sort.BAM...                      ||
 ## ||    Single-end reads are included.                                          ||
@@ -1501,18 +1501,22 @@ summary(dt)</code></pre>
 ## Down            19
 ## NotSig        8016
 ## Up              58</code></pre>
-<pre class="r"><code># tt&lt;- topTable(efit, coef = NULL, adjust = &quot;fdr&quot;,n =nrow(WtvsTreated) )
-# UP &lt;- subset(tt, tt$logFC &gt; 0)
-# DOWN &lt;- subset(tt, tt$logFC &lt; 0)
-# up&lt;-subset(UP,UP$adj.P.Val&lt;0.05)
-# down&lt;-subset(DOWN,DOWN$adj.P.Val&lt;0.05)</code></pre>
 <pre class="r"><code>WtvsTreated&lt;-topTreat(tfit, coef=1, n=Inf)
 
-length(which(WtvsTreated$adj.P.Val &lt; 0.05))</code></pre>
+head(WtvsTreated)</code></pre>
+<pre><code>##               logFC  AveExpr        t      P.Value    adj.P.Val
+## MSTRG.4535 4.568577 3.498173 19.58192 1.949817e-08 0.0001577987
+## MSTRG.3877 3.944236 3.148281 12.61240 6.271890e-07 0.0019113256
+## MSTRG.5433 2.170842 4.059727 12.39127 7.085107e-07 0.0019113256
+## MSTRG.7857 4.105167 3.872250 11.37153 1.405936e-06 0.0026405217
+## MSTRG.3878 2.732973 3.344842 10.99733 1.788059e-06 0.0026405217
+## MSTRG.4536 4.892491 3.602948 10.81666 2.105121e-06 0.0026405217</code></pre>
+<pre class="r"><code>length(which(WtvsTreated$adj.P.Val &lt; 0.05))</code></pre>
 <pre><code>## [1] 77</code></pre>
 <pre class="r"><code>plotMD(tfit, column=1, status=dt[,1], main=colnames(tfit)[1], xlim=c(-8,13), col = c(&quot;green&quot;,&quot;red&quot;))</code></pre>
 <p><img src="data:image/png;base64,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" width="672" /> DE graph</p>
-<pre class="r"><code>glMDPlot(tfit, coef=1, status=dt, main=colnames(tfit)[1], counts=lcpm, groups=group, launch=TRUE)</code></pre>
+<pre class="r"><code>#opens as html file
+glMDPlot(tfit, coef=1, status=dt, main=colnames(tfit)[1], counts=lcpm, groups=group, launch=TRUE)</code></pre>
 <pre><code>## Warning in makeAnno(x, anno): No gene annotation provided.</code></pre>
 <p>Heatmap</p>
 <pre class="r"><code>library(gplots)</code></pre>
