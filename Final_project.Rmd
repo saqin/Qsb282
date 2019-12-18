@@ -23,22 +23,41 @@ library("Glimma")
 
 buildindex(basename="Trinity",reference="rna_seq/Trinity_multiline.fasta",gappedIndex=FALSE,indexSplit=TRUE, memory=4000)
 
+#Read in fastq files
 fastq<-c("rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz","rna_seq/C5060_GAGTGG_L005_R1_001.fastq.gz","rna_seq/C5062_ACAGTG_L005_R1_001.fastq.gz","rna_seq/C5063_GTGAAA_L005_R1_001.fastq.gz","rna_seq/C5059_ATCACG_L005_R2_001.fastq.gz","rna_seq/C5060_GAGTGG_L005_R2_001.fastq.gz","rna_seq/C5062_ACAGTG_L005_R2_001.fastq.gz","rna_seq/C5063_GTGAAA_L005_R2_001.fastq.gz")
 
+#Check quality score 
+qs <- qualityScores(filename= "rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz", nreads=1000)
+
+#creates boxplot of quality score. How likely it did not map
+boxplot(qs)
+
+#align denovo assembly to fastq
 align(index="rna_seq/Trinity",readfile1=fastq,type="rna",input_format="gzFASTQ",output_format="BAM")
 
 # git clone https://github.com/gpertea/stringtie.git
 #make release
+
+#Use samtools to sort BAM files by coordinates
+
 # cd samtools-0.1.18'
 #samtools sort C5059_ATCACG_L005_R1_001.fastq.gz.subread.BAM >C5059_ATCACG_L005_R1_001_sort.BAM
+
+#Use stringtie to convert BAM files into gtf annotations
+
 #  stringtie -o C5059_ATCACG_L005_R2_001.gtf C5059_ATCACG_L005_R2_001_sorted.BAM
+
+#merge all gtf files together
+
 # ./stringtie --merge -F 1  C5059_ATCACG_L005_R1_001.gtf C5059_ATCACG_L005_R2_001.gtf C5060_GAGTGG_L005_R1_001.gtf C5060_GAGTGG_L005_R2_001.gtf C5062_ACAGTG_L005_R1_001.gtf C5062_ACAGTG_L005_R2_001.gtf C5063_GTGAAA_L005_R1_001.gtf C5063_GTGAAA_L005_R1_001.gtf C5063_GTGAAA_L005_R2_001.gtf
 
+#load in bam files
 bam_files<- c("rna_seq/C5059_ATCACG_L005_R1_001_sort.BAM","rna_seq/C5059_ATCACG_L005_R2_001_sort.BAM","rna_seq/C5060_GAGTGG_L005_R1_001_sort.BAM","rna_seq/C5060_GAGTGG_L005_R2_001_sort.BAM","rna_seq/C5062_ACAGTG_L005_R1_001_sort.BAM","rna_seq/C5062_ACAGTG_L005_R2_001_sort.BAM","rna_seq/C5063_GTGAAA_L005_R1_001_sort.BAM","rna_seq/C5063_GTGAAA_L005_R2_001_sort.BAM") 
-proportion_mapped <- propmapped(files= bam_files)
-qs <- qualityScores(filename="rna_seq/C5059_ATCACG_L005_R1_001.fastq.gz",nreads=1000)
-boxplot(qs)
 
+#visualize how many of the sequences mapped together in the BAM files
+proportion_mapped <- propmapped(files= bam_files)
+
+#create counts
 fc <- featureCounts(bam_files,annot.ext="rna_seq/merged.gtf",isGTFAnnotationFile=TRUE,GTF.featureType="exon",GTF.attrType="gene_id")
 
 counts<-fc$counts
@@ -47,31 +66,47 @@ counts<-fc$counts
 
 Organizing Sample Information
 ```{r}
+#store counts in DGElist
 d<- DGEList(counts=fc$counts)
+#names of samples
 samplenames <- substring(colnames(d), 12, nchar(colnames(d))) 
+#create variable group indicating which samples are wt or treated
 group <- as.factor(c("WildType","WildType","WildType","WildType","Treated","Treated","Treated","Treated" ))
+#create column group in sample
 d$samples$group <- group 
+#create variable lane
 lane <- as.factor(rep(("L005")))
+#create column lane
 d$samples$lane <- lane
 
 
 ```
 Filtering Data
 ```{r}
+#computes counts per million, a measure of gene expression levels
 cpm <- cpm(d)
+#log cpm value
 lcpm <- cpm(d, log=TRUE)
+#View log cpm
 summary(lcpm)
+#variable mean of librarysize
 L <- mean(d$samples$lib.size) * 1e-6
+#variable median of librarysize
 M <- median(d$samples$lib.size) * 1e-6
 c(L, M)
 
 #Removing Lowley Expressed Data
 table(rowSums(d$counts==0)==1)
 keep<- filterByExpr(d, group=group)
+#filter out low expressed data
 d <- d[keep,, keep.lib.sizes=FALSE]
+#dimensions
 dim(d)
+#threshold
 lcpm.cutoff <- log2(10/M + 2/L)
 
+
+#graph of raw and filtered data
 library(RColorBrewer)
 nsamples <- ncol(d)
 col <- brewer.pal(nsamples, "Paired")
@@ -96,6 +131,7 @@ legend("topright", samplenames, text.col=col, bty="n")
 ```
 Normalizing Data
 ```{r}
+#Calculate normalization factors to scale the raw library sizes
 d <- calcNormFactors(d, method = "TMM")
 d$samples$norm.factors
 
@@ -104,6 +140,7 @@ d2$samples$norm.factors <- 1
 d2$counts[,1] <- ceiling(d2$counts[,1]*0.05)
 d2$counts[,2] <- d2$counts[,2]*5
 
+#graph of normalized and un-normalized data
 par(mfrow=c(1,2))
 lcpm <- cpm(d2, log=TRUE)
 boxplot(lcpm, las=2, col=col, main="")
@@ -118,6 +155,7 @@ title(main="B. Normalised data", ylab="Log-cpm")
 
 ```
 ```{r}
+#graph of Multidimensional Scaling plot. Clustered by sample and lane
 lcpm <- cpm(d, log=TRUE)
 par(mfrow=c(1,2))
 col.group <- group
@@ -140,18 +178,20 @@ glMDSPlot(lcpm, labels=paste(group, lane, sep="_"), groups=d$samples[,c(1,4)],la
 
 Differential Expression Analysis
 ```{r}
+#create design matrix
 design <- model.matrix(~0+group)
 colnames(design) <- gsub("group", "", colnames(design))
 design<-design[,c("WildType","Treated")]
 
-design 
-
+#create contrast matrix
 contr.matrix <- makeContrasts(
    WtvsTreated = Treated-WildType,
    levels = colnames(design))
 
+#view contrast matrix
 contr.matrix
 
+#voom 
 v <- voom(d, design, plot=TRUE)
 v
 
@@ -159,6 +199,7 @@ v
 ```
 Linear model comparison
 ```{r}
+#remove dependency of mean and variance, adding weights
 vfit <- lmFit(v, design)
 vfit <- contrasts.fit(vfit, contrasts=contr.matrix)
 efit <- eBayes(vfit)
@@ -169,36 +210,38 @@ Examine DE genes
 
 summary(decideTests(efit))
 
-
+#extract upregulated, downregulated, and no difference genes
 tfit <- treat(vfit, lfc=1)
 dt <- decideTests(tfit)
 summary(dt)
 
+
 ```
 
 ```{r}
+#extract top most differentially expressed genes
 WtvsTreated<-topTreat(tfit, coef=1, n=Inf)
-
-head(WtvsTreated)
 
 length(which(WtvsTreated$adj.P.Val < 0.05))
 
+#mean difference plot showing upregulation (green) and downregulation (red). 
 plotMD(tfit, column=1, status=dt[,1], main=colnames(tfit)[1], xlim=c(-8,13), col = c("green","red"))
 
 ```
 DE graph
 ```{r}
-#opens as html file
 glMDPlot(tfit, coef=1, status=dt, main=colnames(tfit)[1], counts=lcpm, groups=group, launch=TRUE)
 ```
 Heatmap
 ```{r}
 library(gplots)
+#gene ID of top 100 genes
 Wt.vs.Treated.topgenes <- row.names(WtvsTreated)[1:100]
 
 i <- which(row.names(v$E) %in% Wt.vs.Treated.topgenes)
 mycol <- colorpanel(1000,"blue","white","red")
 
+#create heatmap 
 par(mar=c(10,4,4,2)+0.1)
 heatmap.2(lcpm[i,], scale="row",
    labRow=row.names(v$E)[i], labCol=group,
